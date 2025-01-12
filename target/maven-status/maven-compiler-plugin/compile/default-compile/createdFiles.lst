@@ -1,0 +1,4 @@
+com\mycompany\calculadoraavanzadamvc\CalculadoraAvanzadaMVC.class
+Modelo\CalculadoraModel.class
+Controlador\CalculadoraController.class
+Vista\CalculadoraView.class
