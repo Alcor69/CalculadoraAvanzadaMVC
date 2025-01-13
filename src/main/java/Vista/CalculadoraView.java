@@ -35,8 +35,18 @@ public class CalculadoraView {
     }
     //para preguntar la operacion
     public String operaciones(){
-        System.out.println("Seleccione una operacion puede ser suma, resta, multiplicacion, divicion, potencia y raiz: ");
-        return scanner.next();
+        String operacion = "";
+    boolean valido = false;
+    while (!valido) {
+        System.out.println("Seleccione una operacion: suma, resta, multiplicacion, division, potencia, raiz");
+        operacion = scanner.next().toLowerCase();
+        if (operacion.matches("suma|resta|multiplicacion|division|potencia|raiz")) {
+            valido = true;
+        } else {
+            System.out.println("Operación no válida. Por favor, intente nuevamente.");
+        }
+    }
+    return operacion;
     }
     //para mostrar el resultado de las operaciones
     public void Mostrar(String mensaje){
